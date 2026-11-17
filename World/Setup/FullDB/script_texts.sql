@@ -27,6 +27,9 @@ TRUNCATE TABLE `script_texts`;
 LOCK TABLES `script_texts` WRITE;
 /*!40000 ALTER TABLE `script_texts` DISABLE KEYS */;
 INSERT INTO `script_texts` (`entry`, `content_default`, `content_loc1`, `content_loc2`, `content_loc3`, `content_loc4`, `content_loc5`, `content_loc6`, `content_loc7`, `content_loc8`, `sound`, `type`, `language`, `emote`, `comment`) VALUES 
+(-1999923,'%s casts its massive shadow upon the whole of Silithus.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,2,0,0,'AQ colossus arrival'),
+(-1999924,'%s hears the call to battle and rises to serve its master.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,2,0,0,'AQ colossus arrival'),
+(-1999925,'%s breaks free of its cocoon beneath Hive\'Ashi.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,2,0,0,'AQ colossus arrival'),
 (-1999926,'Overlord Wyrmthalak calls for help!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,3,0,0,'9568'),
 (-1533158,'%s injects you with a mutagen!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,5,0,0,'grobbulus EMOTE_INJECTION'),
 (-1533157,'%s casts Condemation on everyone!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,3,0,0,'sir_zeliek EMOTE_CONDEMATION'),

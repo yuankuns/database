@@ -102,3 +102,17 @@ UPDATE `mangos_string` SET `content_loc5`='|cffffff00病木林哨塔已被部落
 UPDATE `mangos_string` SET `content_loc5`='|cffffff00病木林哨塔已被聯盟奪去!|r' WHERE `entry`=1607;
 
 SET NAMES 'latin1';
+SET NAMES 'utf8';
+UPDATE `mangos_string` SET `content_loc5`='此事件由安其拉戰爭物資事件控制；請使用 .event aqstart 和 .event aqstatus。' WHERE `entry`=1738;
+UPDATE `mangos_string` SET `content_loc5`='安其拉戰爭物資控制器已在伺服器設定中關閉。' WHERE `entry`=1739;
+UPDATE `mangos_string` SET `content_loc5`='無法儲存安其拉戰爭物資狀態。' WHERE `entry`=1740;
+UPDATE `mangos_string` SET `content_loc5`='安其拉戰爭物資事件已經開始或已經結束。' WHERE `entry`=1741;
+UPDATE `mangos_string` SET `content_loc5`='安其拉戰爭物資事件已啟動；世界狀態即將更新。' WHERE `entry`=1742;
+UPDATE `mangos_string` SET `content_loc5`='安其拉階段 %u；已完成物資目標 %u/%u；已擊敗巨像標記 %u；階段截止時間（Unix 時間）%llu。' WHERE `entry`=1743;
+UPDATE `mangos_string` SET `content_loc5`='安其拉戰爭物資事件目前不處於此階段。' WHERE `entry`=1744;
+UPDATE `mangos_string` SET `content_loc5`='任務未能儲存。請重新連線後再試。' WHERE `entry`=1745;
+
+UPDATE `mangos_string` SET `content_loc5`='$n，青銅龍軍團的勇士，敲響了甲蟲之鑼。安其拉的古老大門打開，顯露出一場被遺忘的戰爭中的恐怖……' WHERE `entry`=1746;
+UPDATE `mangos_string` SET `content_loc5`='巨大的其拉共鳴水晶衝破卡林多的大地。由黑曜石構成的巨型生物從破裂的地面湧出。' WHERE `entry`=1747;
+
+SET NAMES 'latin1';

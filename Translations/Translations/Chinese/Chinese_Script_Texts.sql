@@ -439,7 +439,7 @@ UPDATE `script_texts` SET `content_loc4`='%s心照不宣地点了点头。' WHER
 UPDATE `script_texts` SET `content_loc4`='%s看了一眼她的同胞。' WHERE `entry`=-1000745;
 UPDATE `script_texts` SET `content_loc4`='跟紧我。' WHERE `entry`=-1000754;
 UPDATE `script_texts` SET `content_loc4`='时间之沙将停止流动，但只有片刻的时间！我现在要召唤屏障。' WHERE `entry`=-1000755;
-UPDATE `script_texts` SET `content_loc4`='鹿盔，赶快完成施法！我没法让节界雕文继续维持原位了！召唤自然的力量！' WHERE `entry`=-1000756;
+UPDATE `script_texts` SET `content_loc4`='鹿盔，赶快完成施法！我没法让结界雕文继续维持原位了！召唤自然的力量！' WHERE `entry`=-1000756;
 UPDATE `script_texts` SET `content_loc4`='远古的神灵，指引我……从沉睡中苏醒吧！醒来，封印这片被诅咒的地方！' WHERE `entry`=-1000757;
 UPDATE `script_texts` SET `content_loc4`='%s双腿一软，筋疲力尽地跪倒在地。' WHERE `entry`=-1000758;
 UPDATE `script_texts` SET `content_loc4`='鹿盔，结……结束了。我们胜利了。虽然我们为此付出了惨痛的代价。' WHERE `entry`=-1000759;
@@ -447,6 +447,24 @@ UPDATE `script_texts` SET `content_loc4`='在我的人民目睹并经历了那�
 UPDATE `script_texts` SET `content_loc4`='%s将流沙节杖扔向魔法屏障，节杖顿时碎裂开来。' WHERE `entry`=-1000765;
 UPDATE `script_texts` SET `content_loc4`='鹿盔，你要去哪儿？为了自尊和高傲，你就要切断我们的联系？' WHERE `entry`=-1000766;
 UPDATE `script_texts` SET `content_loc4`='%s失望地摇着头。' WHERE `entry`=-1000768;
+UPDATE `script_texts` SET `content_loc4`='我们必须速战速决，否则一切都将前功尽弃！' WHERE `entry`=-1000740;
+UPDATE `script_texts` SET `content_loc4`='我的部队无法突破其拉虫人的防线，龙族。我们无法靠近到足以布下屏障的位置。' WHERE `entry`=-1000741;
+UPDATE `script_texts` SET `content_loc4`='是啊，鹿盔，记住这些话：不要让悲伤左右你的信念。你心中的念头……你身处的黑暗，夜精灵。盲目的复仇无法带来救赎。' WHERE `entry`=-1000744;
+UPDATE `script_texts` SET `content_loc4`='我们会击退他，安纳克罗斯。你要履行自己的职责，在结界后封印我们的命运时，绝不能动摇。' WHERE `entry`=-1000746;
+UPDATE `script_texts` SET `content_loc4`='沉入永恒的梦境吧，小家伙们。让它吞噬你们！' WHERE `entry`=-1000747;
+UPDATE `script_texts` SET `content_loc4`='安纳克罗斯，这场佯攻能为你和年轻的德鲁伊争取足够时间来封印大门。不要退缩。现在就让我们看看，他们如何应对混乱魔法。' WHERE `entry`=-1000748;
+UPDATE `script_texts` SET `content_loc4`='让他们感受蓝龙军团的怒火！愿玛里苟斯庇佑我！' WHERE `entry`=-1000749;
+UPDATE `script_texts` SET `content_loc4`='暗夜精灵，别忘了今天的牺牲。我们都深受这些野兽所害。' WHERE `entry`=-1000750;
+UPDATE `script_texts` SET `content_loc4`='阿莱克丝塔萨，请赐予我击退敌人的决心。' WHERE `entry`=-1000751;
+UPDATE `script_texts` SET `content_loc4`='现在，鹿盔！我们立刻行动！准备施法！' WHERE `entry`=-1000752;
+UPDATE `script_texts` SET `content_loc4`='完成了，巨龙。带路吧！' WHERE `entry`=-1000753;
+UPDATE `script_texts` SET `content_loc4`='只剩最后一项职责了。' WHERE `entry`=-1000760;
+UPDATE `script_texts` SET `content_loc4`='在我离开这里之前，我要为你献上最后一件礼物，鹿盔领主。若有一天你必须进入这座被诅咒的堡垒，就用流沙节杖敲响神圣的铜锣。维系屏障的魔法便会消散，安其拉的恐怖也将再次席卷世界。' WHERE `entry`=-1000761;
+UPDATE `script_texts` SET `content_loc4`='%s将流沙节杖交给了$N。' WHERE `entry`=-1000762;
+UPDATE `script_texts` SET `content_loc4`='我不想再和希利苏斯、其拉虫人扯上关系，更别提那些该死的巨龙了！' WHERE `entry`=-1000764;
+UPDATE `script_texts` SET `content_loc4`='我儿子的灵魂不会因这场空洞的胜利而得到慰藉，巨龙！我会让他回来。哪怕要等上千年，我也一定会让他回来！' WHERE `entry`=-1000767;
+UPDATE `script_texts` SET `content_loc4`='%s跪下拾起破碎的节杖碎片。' WHERE `entry`=-1000769;
+UPDATE `script_texts` SET `content_loc4`='凡人，你现在已经知晓一切。' WHERE `entry`=-1000770;
 UPDATE `script_texts` SET `content_loc4`='似乎我们遇到麻烦了。打起精神来，他们来了！' WHERE `entry`=-1000772;
 UPDATE `script_texts` SET `content_loc4`='刺客……最好在他们找到我们之前快点离开这里。' WHERE `entry`=-1000773;
 UPDATE `script_texts` SET `content_loc4`='小心！我感到附近有邪恶的存在……亡灵！' WHERE `entry`=-1000774;
@@ -965,5 +983,9 @@ UPDATE `script_texts` SET `content_loc4`='%s对附近的所有血肉之躯发动
 UPDATE `script_texts` SET `content_loc4`='地穴卫士的尸体上爬出了死尸甲虫！' WHERE `entry`=-1533155;
 UPDATE `script_texts` SET `content_loc4`='%s对所有人施放了不灭痛楚！' WHERE `entry`=-1533156;
 UPDATE `script_texts` SET `content_loc4`='%s对你施放了变异注射！' WHERE `entry`=-1533158;
+
+UPDATE `script_texts` SET `content_loc4`='%s 的巨大身影笼罩着整个希利苏斯。' WHERE `entry`=-1999923;
+UPDATE `script_texts` SET `content_loc4`='%s 听到了战斗的召唤，起身为主人效命。' WHERE `entry`=-1999924;
+UPDATE `script_texts` SET `content_loc4`='%s 从亚什虫巢地下的茧中破茧而出。' WHERE `entry`=-1999925;
 
 SET NAMES 'latin1';

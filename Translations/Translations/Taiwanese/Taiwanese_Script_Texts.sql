@@ -446,6 +446,24 @@ UPDATE `script_texts` SET `content_loc5`='在我的人民目睹並經歷了那�
 UPDATE `script_texts` SET `content_loc5`='%s將流沙權杖揮向防護罩，將它粉碎。' WHERE `entry`=-1000765;
 UPDATE `script_texts` SET `content_loc5`='鹿盔大人，你要去哪裡?你會為了驕傲粉碎我們的約定嗎?' WHERE `entry`=-1000766;
 UPDATE `script_texts` SET `content_loc5`='%s失望地搖著頭。' WHERE `entry`=-1000768;
+UPDATE `script_texts` SET `content_loc5`='我們必須速戰速決，否則一切都將前功盡棄！' WHERE `entry`=-1000740;
+UPDATE `script_texts` SET `content_loc5`='我的部隊無法突破其拉蟲人的防線，巨龍。我們無法靠近到足以布下屏障的位置。' WHERE `entry`=-1000741;
+UPDATE `script_texts` SET `content_loc5`='是啊，鹿盔，記住這些話：不要讓悲傷左右你的信念。你心中的念頭……你身處的黑暗，夜精靈。盲目的復仇無法帶來救贖。' WHERE `entry`=-1000744;
+UPDATE `script_texts` SET `content_loc5`='我們會擊退他，安納克羅斯。你要履行自己的職責，在結界後封印我們的命運時，絕不能動搖。' WHERE `entry`=-1000746;
+UPDATE `script_texts` SET `content_loc5`='沉入永恆的夢境吧，小傢伙們。讓它吞噬你們！' WHERE `entry`=-1000747;
+UPDATE `script_texts` SET `content_loc5`='安納克羅斯，這場佯攻能為你和年輕的德魯伊爭取足夠時間來封印大門。不要退縮。現在就讓我們看看，他們如何應對混亂魔法。' WHERE `entry`=-1000748;
+UPDATE `script_texts` SET `content_loc5`='讓他們感受藍龍軍團的怒火！願瑪里苟斯庇佑我！' WHERE `entry`=-1000749;
+UPDATE `script_texts` SET `content_loc5`='夜精靈，別忘了今天的犧牲。我們都深受這些野獸所害。' WHERE `entry`=-1000750;
+UPDATE `script_texts` SET `content_loc5`='雅立史卓莎，請賜予我擊退敵人的決心。' WHERE `entry`=-1000751;
+UPDATE `script_texts` SET `content_loc5`='現在，鹿盔！我們立刻行動！準備施法！' WHERE `entry`=-1000752;
+UPDATE `script_texts` SET `content_loc5`='完成了，巨龍。帶路吧！' WHERE `entry`=-1000753;
+UPDATE `script_texts` SET `content_loc5`='只剩最後一項職責了。' WHERE `entry`=-1000760;
+UPDATE `script_texts` SET `content_loc5`='在我離開這裡之前，我要為你獻上最後一件禮物，鹿盔領主。若有一天你必須進入這座被詛咒的堡壘，就用流沙權杖敲響神聖的銅鑼。維繫屏障的魔法便會消散，安其拉的恐怖也將再次席捲世界。' WHERE `entry`=-1000761;
+UPDATE `script_texts` SET `content_loc5`='%s將流沙權杖交給了$N。' WHERE `entry`=-1000762;
+UPDATE `script_texts` SET `content_loc5`='我不想再和希利蘇斯、其拉蟲人扯上關係，更別提那些該死的巨龍了！' WHERE `entry`=-1000764;
+UPDATE `script_texts` SET `content_loc5`='我兒子的靈魂不會因這場空洞的勝利而得到慰藉，巨龍！我會讓他回來。哪怕要等上一千年，我也一定會讓他回來！' WHERE `entry`=-1000767;
+UPDATE `script_texts` SET `content_loc5`='%s跪下拾起破碎的權杖碎片。' WHERE `entry`=-1000769;
+UPDATE `script_texts` SET `content_loc5`='凡人，你現在已經知曉一切。' WHERE `entry`=-1000770;
 UPDATE `script_texts` SET `content_loc5`='看起來我們有點麻煩。他們來了!' WHERE `entry`=-1000772;
 UPDATE `script_texts` SET `content_loc5`='刺客...最好在他們找到我們之前快點離開這裡。' WHERE `entry`=-1000773;
 UPDATE `script_texts` SET `content_loc5`='小心!我感到附近有邪惡的存在...亡靈!' WHERE `entry`=-1000774;
@@ -954,5 +972,9 @@ UPDATE `script_texts` SET `content_loc5`='%s毀滅了附近所有的血肉!' WHE
 UPDATE `script_texts` SET `content_loc5`='屍甲蟲從地穴守衛的屍體中出現!' WHERE `entry`=-1533155;
 UPDATE `script_texts` SET `content_loc5`='%s對所有人施展不屈之痛!' WHERE `entry`=-1533156;
 UPDATE `script_texts` SET `content_loc5`='%s對你注射一種突變物質。' WHERE `entry`=-1533158;
+
+UPDATE `script_texts` SET `content_loc5`='%s 的巨大身影籠罩著整個希利蘇斯。' WHERE `entry`=-1999923;
+UPDATE `script_texts` SET `content_loc5`='%s 聽到了戰鬥的召喚，起身為主人效命。' WHERE `entry`=-1999924;
+UPDATE `script_texts` SET `content_loc5`='%s 從亞什蟲巢地下的繭中破繭而出。' WHERE `entry`=-1999925;
 
 SET NAMES 'latin1';

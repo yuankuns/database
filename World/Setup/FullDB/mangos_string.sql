@@ -875,7 +875,17 @@ INSERT INTO `mangos_string` (`entry`, `content_default`, `content_loc1`, `conten
 (1713,'You can only freeze online characters.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'Language.h','MangosStrings','LANG_COMMAND_FREEZE_PLAYER_PLAYER_NOT_FOUND'),
 (1714,'You can only unfreeze online characters.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'Language.h','MangosStrings','LANG_COMMAND_UNFREEZE_PLAYER_PLAYER_NOT_FOUND'),
 (1715,'You must be a Knight or higher rank in order to enter the Champions Hall.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'Language.h','MangosStrings','LANG_CANNOT_ENTER_CHAMPIONS_HALL'),
-(1716,'You must be a Stone Guard or higher rank in order to enter the Hall of Legends.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'Language.h','MangosStrings','LANG_CANNOT_ENTER_LEGENDS_HALL');
+(1716,'You must be a Stone Guard or higher rank in order to enter the Hall of Legends.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'Language.h','MangosStrings','LANG_CANNOT_ENTER_LEGENDS_HALL'),
+(1738,'This event is controlled by the Ahn\'Qiraj war effort; use .event aqstart and .event aqstatus.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'Language.h','MangosStrings','LANG_AQ_EVENT_CONTROLLED'),
+(1739,'The Ahn\'Qiraj war effort controller is disabled in the server configuration.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'Language.h','MangosStrings','LANG_AQ_EVENT_DISABLED'),
+(1740,'Unable to save Ahn\'Qiraj war effort state.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'Language.h','MangosStrings','LANG_AQ_EVENT_STORAGE_ERROR'),
+(1741,'The Ahn\'Qiraj war effort has already started or finished.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'Language.h','MangosStrings','LANG_AQ_EVENT_ALREADY_STARTED'),
+(1742,'Ahn\'Qiraj war effort started; the world will update shortly.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'Language.h','MangosStrings','LANG_AQ_EVENT_STARTED'),
+(1743,'Ahn\'Qiraj phase %u; supply goals met %u/%u; defeated colossi mask %u; phase deadline (Unix time) %llu.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'Language.h','MangosStrings','LANG_AQ_EVENT_STATUS'),
+(1744,'This stage of the Ahn\'Qiraj war effort is not active.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'Language.h','MangosStrings','LANG_AQ_EVENT_STAGE_INACTIVE'),
+(1745,'The quest was not saved. Please reconnect and try again.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'Language.h','MangosStrings','LANG_AQ_EVENT_QUEST_NOT_SAVED'),
+(1746,'$n, Champion of the Bronze Dragonflight, has rung the Scarab Gong. The ancient gates of Ahn\'Qiraj open, revealing the horrors of a forgotten war...',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'Language.h','MangosStrings','LANG_AQ_GONG_ANNOUNCEMENT'),
+(1747,'Massive Qiraji resonating crystals break through the earthen crust of Kalimdor. Colossal creatures made of obsidian stone breach the freshly broken land.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'Language.h','MangosStrings','LANG_AQ_QIRAJI_BREAK');
 /*!40000 ALTER TABLE `mangos_string` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

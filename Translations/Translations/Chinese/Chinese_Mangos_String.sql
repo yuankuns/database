@@ -225,3 +225,17 @@ UPDATE `mangos_string` SET `content_loc4`='|cffffff00部落已经收集了200个
 UPDATE `mangos_string` SET `content_loc4`='|cffffff00联盟已经收集了200个希利苏斯水晶尘！|r' WHERE `entry`=1636;
 
 SET NAMES 'latin1';
+SET NAMES 'utf8';
+UPDATE `mangos_string` SET `content_loc4`='此事件由安其拉战争物资事件控制；请使用 .event aqstart 和 .event aqstatus。' WHERE `entry`=1738;
+UPDATE `mangos_string` SET `content_loc4`='安其拉战争物资控制器已在服务器配置中关闭。' WHERE `entry`=1739;
+UPDATE `mangos_string` SET `content_loc4`='无法保存安其拉战争物资状态。' WHERE `entry`=1740;
+UPDATE `mangos_string` SET `content_loc4`='安其拉战争物资事件已经开始或已经结束。' WHERE `entry`=1741;
+UPDATE `mangos_string` SET `content_loc4`='安其拉战争物资事件已启动；世界状态即将更新。' WHERE `entry`=1742;
+UPDATE `mangos_string` SET `content_loc4`='安其拉阶段 %u；已完成物资目标 %u/%u；已击败巨像标记 %u；阶段截止时间（Unix 时间）%llu。' WHERE `entry`=1743;
+UPDATE `mangos_string` SET `content_loc4`='安其拉战争物资事件当前不处于此阶段。' WHERE `entry`=1744;
+UPDATE `mangos_string` SET `content_loc4`='任务未能保存。请重新连接后再试。' WHERE `entry`=1745;
+
+UPDATE `mangos_string` SET `content_loc4`='$n，青铜龙军团的勇士，敲响了甲虫之锣。安其拉的古老大门打开，显露出一场被遗忘的战争中的恐怖……' WHERE `entry`=1746;
+UPDATE `mangos_string` SET `content_loc4`='巨大的其拉共鸣水晶冲破卡利姆多的大地。由黑曜石构成的巨型生物从破裂的地面涌出。' WHERE `entry`=1747;
+
+SET NAMES 'latin1';
