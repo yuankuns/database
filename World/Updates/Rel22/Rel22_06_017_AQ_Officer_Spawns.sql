@@ -2,8 +2,8 @@
 -- Zero has no spawn_group/world-state condition support. Preserve the six
 -- named officers and all 41 occupants as fixed game-event spawns in phase 4.
 -- The source randomly selects a slot for each named officer; this port fixes
--- each officer to the first source GUID in its group. Source respawn range
--- 600-900 seconds is represented by Zero's fixed 750-second respawn.
+-- each officer to the first source GUID in its group. The 750-second database
+-- value is the fallback; the AQ-aware core samples 600-900 seconds per death.
 -- The destination creature/event tables are MyISAM and cannot roll back.
 -- Check all predictable conflicts before writing; inserts are idempotent and
 -- the version row is last so rerunning 016 can finish an interrupted update.
