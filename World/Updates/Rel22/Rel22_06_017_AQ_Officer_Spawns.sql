@@ -1,9 +1,9 @@
 -- CMaNGOS Classic DB e4825cf: AQ 10-hour-war spawn groups 19006-19011.
 -- Zero has no spawn_group/world-state condition support. Preserve the six
 -- named officers and all 41 occupants as fixed game-event spawns in phase 4.
--- The source randomly selects a slot for each named officer; this port fixes
--- each officer to the first source GUID in its group. The 750-second database
--- value is the fallback; the AQ-aware core samples 600-900 seconds per death.
+-- The static entries use the first source GUID as a fallback. The AQ-aware
+-- core assigns the named officer among eligible slots and samples a 600-900
+-- second respawn; the database fallback delay is 750 seconds.
 -- The destination creature/event tables are MyISAM and cannot roll back.
 -- Check all predictable conflicts before writing; inserts are idempotent and
 -- the version row is last so rerunning 016 can finish an interrupted update.
