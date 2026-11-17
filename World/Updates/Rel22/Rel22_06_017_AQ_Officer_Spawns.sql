@@ -83,7 +83,7 @@ BEGIN
              LEFT JOIN `creature` c ON c.guid=s.guid
              LEFT JOIN `creature_template` t ON t.entry=s.entry
              WHERE c.guid IS NOT NULL AND (c.id<>s.entry OR c.map<>s.map OR
-               POW(c.position_x-s.x,2)+POW(c.position_y-s.y,2)+POW(c.position_z-s.z,2)>=0.01 OR
+               c.position_x<>s.x OR c.position_y<>s.y OR c.position_z<>s.z OR
                c.orientation<>s.orientation OR c.modelid<>0 OR c.equipment_id<>0 OR
                c.spawntimesecs<>750 OR c.spawndist<>0 OR c.currentwaypoint<>0 OR
                c.curhealth<>GREATEST(t.MinLevelHealth,1) OR c.curmana<>t.MinLevelMana OR
@@ -96,9 +96,24 @@ BEGIN
         IF EXISTS (SELECT 1 FROM `aq_officer_spawn_stage` s JOIN `game_event_creature` e ON e.guid=s.guid WHERE e.event<>123) THEN
             SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT='AQ officer event binding conflict';
         END IF;
-        IF EXISTS (SELECT 1 FROM `game_event_creature` e LEFT JOIN `aq_officer_spawn_stage` s ON s.guid=e.guid
-             WHERE e.event=123 AND e.guid BETWEEN 802000 AND 802040 AND s.guid IS NULL) THEN
-            SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT='AQ officer spawn conflict';
+        -- Orphaned GUID references can otherwise alter a newly inserted spawn.
+        IF EXISTS (SELECT 1 FROM `aq_officer_spawn_stage` s JOIN `creature_addon` a ON a.guid=s.guid) THEN
+            SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT='AQ officer addon reference conflict';
+        END IF;
+        IF EXISTS (SELECT 1 FROM `aq_officer_spawn_stage` s JOIN `creature_battleground` b ON b.guid=s.guid) THEN
+            SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT='AQ officer battleground reference conflict';
+        END IF;
+        IF EXISTS (SELECT 1 FROM `aq_officer_spawn_stage` s JOIN `creature_linking` l ON l.guid=s.guid OR l.master_guid=s.guid) THEN
+            SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT='AQ officer linking reference conflict';
+        END IF;
+        IF EXISTS (SELECT 1 FROM `aq_officer_spawn_stage` s JOIN `creature_movement` m ON m.id=s.guid) THEN
+            SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT='AQ officer movement reference conflict';
+        END IF;
+        IF EXISTS (SELECT 1 FROM `aq_officer_spawn_stage` s JOIN `game_event_creature_data` d ON d.guid=s.guid) THEN
+            SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT='AQ officer event data reference conflict';
+        END IF;
+        IF EXISTS (SELECT 1 FROM `aq_officer_spawn_stage` s JOIN `pool_creature` p ON p.guid=s.guid) THEN
+            SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT='AQ officer pool reference conflict';
         END IF;
 
         INSERT IGNORE INTO `creature`
