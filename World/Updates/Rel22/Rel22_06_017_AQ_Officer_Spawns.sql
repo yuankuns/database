@@ -4,13 +4,15 @@
 -- The source randomly selects a slot for each named officer; this port fixes
 -- each officer to the first source GUID in its group. Source respawn range
 -- 600-900 seconds is represented by Zero's fixed 750-second respawn.
+-- The destination creature/event tables are MyISAM and cannot roll back.
+-- Check all predictable conflicts before writing; inserts are idempotent and
+-- the version row is last so rerunning 016 can finish an interrupted update.
 DROP PROCEDURE IF EXISTS `update_mangos`;
 DELIMITER $$
 CREATE DEFINER=`root`@`localhost` PROCEDURE `update_mangos`()
 BEGIN
     DECLARE EXIT HANDLER FOR SQLEXCEPTION
     BEGIN
-        ROLLBACK;
         RESIGNAL;
     END;
     SET @v := (SELECT `version` FROM `db_version` ORDER BY version DESC,structure DESC,content DESC LIMIT 1);
@@ -77,9 +79,15 @@ BEGIN
         IF NOT EXISTS (SELECT 1 FROM `game_event` WHERE `entry`=123) THEN
             SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT='AQ 10-hour-war event missing';
         END IF;
-        IF EXISTS (SELECT 1 FROM `aq_officer_spawn_stage` s LEFT JOIN `creature` c ON c.guid=s.guid
+        IF EXISTS (SELECT 1 FROM `aq_officer_spawn_stage` s
+             LEFT JOIN `creature` c ON c.guid=s.guid
+             LEFT JOIN `creature_template` t ON t.entry=s.entry
              WHERE c.guid IS NOT NULL AND (c.id<>s.entry OR c.map<>s.map OR
-               POW(c.position_x-s.x,2)+POW(c.position_y-s.y,2)+POW(c.position_z-s.z,2)>=0.01 OR c.orientation<>s.orientation)) THEN
+               POW(c.position_x-s.x,2)+POW(c.position_y-s.y,2)+POW(c.position_z-s.z,2)>=0.01 OR
+               c.orientation<>s.orientation OR c.modelid<>0 OR c.equipment_id<>0 OR
+               c.spawntimesecs<>750 OR c.spawndist<>0 OR c.currentwaypoint<>0 OR
+               c.curhealth<>GREATEST(t.MinLevelHealth,1) OR c.curmana<>t.MinLevelMana OR
+               c.DeathState<>0 OR c.MovementType<>0)) THEN
             SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT='AQ officer creature GUID conflict';
         END IF;
         IF EXISTS (SELECT 1 FROM `aq_officer_spawn_stage` s LEFT JOIN `creature_template` t ON t.entry=s.entry WHERE t.entry IS NULL) THEN
