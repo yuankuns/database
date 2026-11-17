@@ -72,6 +72,25 @@ BEGIN
           (155794,802039,15812,1,-1333.52,-2049.01,91.79,0,19011),
           (155820,802040,15812,1,-2337.32,-2371.55,93.25,0,19011);
 
+        SELECT COUNT(*),COUNT(DISTINCT `group_id`)
+          INTO @aq_officer_spawn_count,@aq_officer_group_count
+          FROM `aq_officer_spawn_stage`;
+        IF @aq_officer_spawn_count<>41 OR @aq_officer_group_count<>6 THEN
+            SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT='AQ officer spawn roster count mismatch';
+        END IF;
+        IF EXISTS (SELECT `group_id` FROM `aq_officer_spawn_stage` GROUP BY `group_id`
+          HAVING `group_id` NOT IN (19006,19007,19008,19009,19010,19011) OR
+            COUNT(*)<>CASE `group_id` WHEN 19006 THEN 8 WHEN 19007 THEN 12 WHEN 19008 THEN 4
+              WHEN 19009 THEN 4 WHEN 19010 THEN 6 WHEN 19011 THEN 7 END OR
+            SUM(`entry`=CASE `group_id` WHEN 19006 THEN 15818 WHEN 19007 THEN 15817
+              WHEN 19008 THEN 15816 WHEN 19009 THEN 15815 WHEN 19010 THEN 15814 WHEN 19011 THEN 15813 END)<>1 OR
+            SUM(`entry`=CASE `group_id` WHEN 19006 THEN 15757 WHEN 19007 THEN 15753
+              WHEN 19008 THEN 15750 WHEN 19009 THEN 15747 WHEN 19010 THEN 15806 WHEN 19011 THEN 15812 END)<>
+              CASE `group_id` WHEN 19006 THEN 7 WHEN 19007 THEN 11 WHEN 19008 THEN 3
+                WHEN 19009 THEN 3 WHEN 19010 THEN 5 WHEN 19011 THEN 6 END) THEN
+            SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT='AQ officer group composition mismatch';
+        END IF;
+
         IF (SELECT COUNT(*) FROM `creature_template` WHERE `entry` IN
             (15747,15750,15753,15757,15806,15812,15813,15814,15815,15816,15817,15818)) <> 12 THEN
             SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT='AQ officer templates missing';
